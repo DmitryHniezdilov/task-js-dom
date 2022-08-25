@@ -63,7 +63,7 @@ export const dataList = [
 	{
 		"id": "item-5",
 		"Title": "Jeff Lowe's Metanoia",
-		"Plot": "From the top of the world to the end of the line, this film follows the life and climbs of legendary alpinist Jeff Lowe, through his visionary ascents around the world up to his current dance with a terminal disease. Metanoia: A fundamental change of thinking; a transformative change of heart. Jeff's 'unimaginable' new route, Metanoia, up the North Face of the Eiger in Switzerland, changed his life forever and prepared him for the greatest adventure he's ever been on - the climb of his life, as he slowly loses all of his physical abilities and faces his own mortality. It is a mind-bending adventure through time and space that gives physical form to Jeff's unique philosophies and inspiring creative genius. Narrated by Jon Krakauer.",
+		"Plot": "From the top of the world to the end of the line, this film follows the life and climbs of legendary alpinist Jeff Lowe, through his visionary ascents around the world up to his current dance with a terminal disease. Metanoia: A fundamental change of thinking; a transformative change of heart. Jeff's 'unimaginable' new route, Metanoia, up the North Face of the Eiger in Switzerland, changed his life forever and prepared him for the greatest adventure he's ever been on - the climb of his life, as he slowly loses all of his physical abilities and faces his own mortality.",
 		"Poster": "https://m.media-amazon.com/images/M/MV5BOTUxY2M3OGUtMzA5NC00Njk1LTkyMzMtZDM2ZTE5OGNjY2VkXkEyXkFqcGdeQXVyMTM4NDQyNDY@._V1_FMjpg_UY720_.jpg",
         "details": {
             "Year": "2014",
@@ -81,6 +81,6 @@ export const dataList = [
 export const defaultContentItem = {
     "id": "item-head",
     "Title": "Top 5 Best Climbing Movies of All Time",
-    "Plot": "In the world of elite sports, rock climbing is relatively young. Rock gods and goddesses were pushing the limits of the sport starting in the ’50s and ’60s, but it wasn’t until the late 1970s that climbing started to be documented. Even then, the quality of the documentation was mediocre, at best. Since then, a number of movies and documentaries featuring the radical sport of rock climbing have been released. In this page you may see a synopsis of five of the best climbing climbing films of all time. Each of these documentaries are based on a true story - no Hollywood acting here!",
+    "Plot": "In the world of elite sports, rock climbing is relatively young. Rock gods and goddesses were pushing the limits of the sport starting in the ’50s and ’60s, but it wasn’t until the late 1970s that climbing started to be documented. Even then, the quality of the documentation was mediocre, at best. Since then, a number of movies and documentaries featuring the radical sport of rock climbing have been released. In this page you may see a synopsis of five of the best climbing films of all time. Each of these documentaries are based on a true story - no Hollywood acting here!",
     "Poster": "https://cdn.pixabay.com/photo/2018/03/29/07/35/water-3271579_960_720.jpg"
 }

@@ -48,7 +48,7 @@ $btn-hov: rgba(227, 90, 37, .5);
     &__bcg-box {
         position: absolute;
         right: 0;
-        bottom: 0;
+        bottom: -100px;
         left: 0;
         height: 65%;
         user-select: none;
@@ -117,13 +117,16 @@ $btn-hov: rgba(227, 90, 37, .5);
     }
 }
 
+.paper {
+    border-radius: 15px;
+    background-color: $paper-bcg;
+    backdrop-filter: blur(10px);
+}
+
 .menu {
     &__list {
-        border-radius: 15px;
         padding: 15px 0;
         list-style: none;
-        background-color: $paper-bcg;
-        backdrop-filter: blur(10px);
     }
 
     &__btn {
@@ -199,9 +202,6 @@ $btn-hov: rgba(227, 90, 37, .5);
       "top top"
       "img-wrap info-wrap"
     ;
-    border-radius: 15px;
-    background-color: $paper-bcg;
-    backdrop-filter: blur(10px);
 
     &__top {
         grid-area: top;
@@ -224,9 +224,10 @@ $btn-hov: rgba(227, 90, 37, .5);
     }
 
     &__img {
-        object-fit: contain;
+        object-fit: cover;
         width: 100%;
         height: auto;
+        max-height: 500px;
     }
 
     &__info-list {

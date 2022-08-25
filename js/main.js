@@ -1,6 +1,6 @@
 "use strict";
 
-import { dataList, defaultContentItem } from './data.js';
+import { dataList, defaultContentItem } from "./data.js";
 
 // helpers funk
 
@@ -14,9 +14,9 @@ let minToHm = (min) => {
 
 // find elements
 
-const elemLogo = document.querySelector('.js-elem-logo');
-const elemMenu = document.querySelector('.js-elem-menu');
-const elemContent = document.querySelector('.js-elem-content');
+const elemLogo = document.querySelector(".js-elem-logo");
+const elemMenu = document.querySelector(".js-elem-menu");
+const elemContent = document.querySelector(".js-elem-content");
 
 // create markup
 
@@ -25,7 +25,7 @@ const createMenuMarkup = (data) => {
         return (
             `
                 <li class="menu__item" >
-                    <button class="menu__btn" type="button">${item["Title"]}</button>
+                    <button class="menu__btn" type="button" data-item-id="${item["id"]}">${item["Title"]}</button>
                 </li>
             `
         )
@@ -53,7 +53,7 @@ const createСontentMarkup = ( item = defaultContentItem) => {
                 `
                 )
             })
-        : '';
+        : "";
 
     return (
         `
@@ -62,7 +62,7 @@ const createСontentMarkup = ( item = defaultContentItem) => {
             </header>
             <div class="content__img-wrap">
                 <figure class="content__img-inner">
-                    <img class="wrapper__bcg-img" src="${item["Poster"]}" alt="Poster ${item["Title"]}">
+                    <img class="content__img" src="${item["Poster"]}" alt="Poster ${item["Title"]}">
                 </figure>
             </div>
             <div class="content__info-wrap">
@@ -82,7 +82,32 @@ const createСontentMarkup = ( item = defaultContentItem) => {
 
 const menuListData = [];
 
-// add markup
+// add initial markup
 
 elemMenu.innerHTML += createMenuMarkup(dataList);
 elemContent.innerHTML += createСontentMarkup();
+
+// control
+
+const deleteActiveClass = () => elemMenu.querySelectorAll(".is-active").forEach(item => item.classList.remove("is-active"));
+const addActiveClass = (event) => event.target.classList.add("is-active");
+
+const getItemId = (event) => event.target.getAttribute("data-item-id");
+const getContentItem = (event) => dataList.filter(item => item["id"] === getItemId(event))[0];
+
+const updateContent = (item) => {
+    elemContent.innerHTML = null;
+    elemContent.innerHTML += createСontentMarkup(item);
+}
+
+elemMenu.addEventListener("click", (event) => {
+    const isPrevent = event.target.classList.contains("is-active") || event.target.classList.contains("menu__list");
+
+    isPrevent ? event.preventDefault : (updateContent(getContentItem(event)), deleteActiveClass(), addActiveClass(event));
+});
+
+elemLogo.addEventListener("click", (event) => {
+    const isPrevent = elemMenu.querySelectorAll(".is-active");
+
+    isPrevent ? (updateContent(defaultContentItem), deleteActiveClass()) : event.preventDefault;
+});

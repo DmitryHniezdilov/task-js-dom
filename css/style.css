@@ -43,7 +43,7 @@
 .wrapper__bcg-box {
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: -20px;
   left: 0;
   height: 65%;
   -webkit-user-select: none;
@@ -151,13 +151,16 @@
   gap: 30px;
 }
 
-.menu__list {
+.paper {
   border-radius: 15px;
-  padding: 15px 0;
-  list-style: none;
   background-color: rgba(110, 123, 127, 0.3);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
+}
+
+.menu__list {
+  padding: 15px 0;
+  list-style: none;
 }
 
 .menu__btn {
@@ -241,10 +244,6 @@
   grid-template-rows: auto 1fr;
   gap: 20px;
       grid-template-areas: "top top" "img-wrap info-wrap";
-  border-radius: 15px;
-  background-color: rgba(110, 123, 127, 0.3);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
 }
 
 .content__top {
@@ -276,10 +275,11 @@
 }
 
 .content__img {
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
   height: auto;
+  max-height: 500px;
 }
 
 .content__info-list {
