@@ -62,7 +62,7 @@ const createСontentMarkup = ( item = defaultContentItem) => {
             </header>
             <div class="content__img-wrap">
                 <figure class="content__img-inner">
-                    <img class="content__img" src="${item["Poster"]}" alt="Poster ${item["Title"]}">
+                    <img class="content__img" src="./img/${item["Poster"]}" alt="Poster ${item["Title"]}">
                 </figure>
             </div>
             <div class="content__info-wrap">
