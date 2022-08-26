@@ -46,7 +46,7 @@ $btn-hov: rgba(227, 90, 37, 0.5);
   &__bcg-box {
     position: absolute;
     right: 0;
-    bottom: -20px;
+    bottom: -100px;
     left: 0;
     height: 65%;
     user-select: none;
@@ -56,6 +56,26 @@ $btn-hov: rgba(227, 90, 37, 0.5);
     object-fit: contain;
     width: 100%;
     height: auto;
+  }
+
+  &__inner {
+    max-height: 100vh;
+    position: relative;
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+  }
+
+  &__inner::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &__inner::-webkit-scrollbar-track {
+    box-shadow: transparent;
+  }
+
+  &__inner::-webkit-scrollbar-thumb {
+    background-color: $bcgBlue;
+    border-radius: 2px;
   }
 }
 
