@@ -51,7 +51,7 @@
 .wrapper__bcg-box {
   position: absolute;
   right: 0;
-  bottom: -100px;
+  bottom: -20px;
   left: 0;
   height: 65%;
   -webkit-user-select: none;
